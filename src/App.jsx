@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import bgImage from "./assets/bg.jpg";
 import SportsCards from "./components/SportsCards";
+import CountUp from 'react-countup';
 
 function App() {
   return (
@@ -38,7 +39,9 @@ function App() {
 
         <div className="flex max-w-[1200px] w-full justify-between p-5">
           <div>
-            <p className="text-[55px]">600+</p>
+            <p className="text-[55px]">
+              <CountUp end={600} duration={2} /> +
+            </p>
             <p className="text-[20px]"> Registrations</p>
           </div>
           <div>
