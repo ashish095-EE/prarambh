@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+body{
+  background-color: black;
+  padding: 10px;
+  margin: 0px;
+  color: white;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: saman;
+  src: url("../public/SAMAN___.TTF");
+}
+
+.saman{
+  font-family: saman;
+}
+
+@font-face {
+  font-family: robo;
+  src: url("../public/Roboto_Condensed-Black.ttf");
+}
+
+.robo{
+  font-family: robo;
+}
