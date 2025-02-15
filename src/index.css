@@ -6,7 +6,7 @@ body{
   padding: 10px;
   margin: 0px;
   color: white;
-  cursor: pointer;
+  
 }
 
 @font-face {
@@ -25,4 +25,30 @@ body{
 
 .robo{
   font-family: robo;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Dark background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3a3837, #211e1f); /* Gradient scrollbar */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #111111, #6a6562); /* Change on hover */
+}
+
+/* Apply this to your scrollable sections */
+.custom-scrollbar {
+  overflow-y: scroll;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #292828 #1a1a1a; /* For Firefox */
 }
