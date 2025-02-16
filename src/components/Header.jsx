@@ -5,7 +5,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex justify-between items-center top-0 left-0 p-4 w-full bg-black text-[#99d98c]fixed">
+    <header className="flex justify-between items-center top-0 left-0 p-4 w-full bg-black text-[#99d98c] fixed">
       {/* Logo */}
       <div>
         <h1 className="saman text-[25px]">prarambh</h1>
@@ -18,7 +18,7 @@ function Header() {
         <p className="saman hover:border-b hover:border-red-500 cursor-pointer">CONTACT US</p>
         <p className="saman hover:border-b hover:border-red-500 cursor-pointer">GALLERY</p>
         <p className="saman hover:border-b hover:border-red-500 cursor-pointer">COORDINATORS</p>
-        <button className="saman outline border p-2 rounded-md hover:border-red-400 hover:bg-orange-600 cursor-pointer">
+        <button className="text-[#92BB7E] robo outline border p-2 rounded-md hover:bg-[#92BB7E] hover:text-black cursor-pointer">
           Register
         </button>
       </nav>
