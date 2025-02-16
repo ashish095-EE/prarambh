@@ -5,7 +5,7 @@ body{
   background-color: black;
   padding: 10px;
   margin: 0px;
-  color: white;
+  color: #92BB7E;
   
 }
 
@@ -51,4 +51,29 @@ body{
   overflow-y: scroll;
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: #292828 #1a1a1a; /* For Firefox */
+}
+
+@keyframes border-blink {
+  0% { border-color: #22c55e; } /* Green */
+  50% { border-color: #facc15; } /* Yellow */
+  100% { border-color: #22c55e; } /* Back to Green */
+}
+.animate-border-blink {
+  animation: border-blink 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #B6EB9D, 0 0 20px #B6EB9D, 0 0 30px #B6EB9D;
+  }
+  50% {
+    box-shadow: 0 0 15px #B6EB9D, 0 0 25px #B6EB9D, 0 0 40px #B6EB9D;
+  }
+  100% {
+    box-shadow: 0 0 10px #B6EB9D, 0 0 20px #B6EB9D, 0 0 30px #B6EB9D;
+  }
+}
+
+.animate-glow {
+  animation: glow 2s infinite alternate;
 }
