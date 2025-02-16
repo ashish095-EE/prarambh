@@ -18,7 +18,7 @@ function App() {
       <Header />
       
       {/* First Section - Full Screen */}
-      <section className="text-[#92BB7E] flex flex-col items-center gap-6 max-w-[1200px] w-full text-center h-screen justify-center mx-auto px-6 md:px-8 mt-50">
+      <section className="text-[#92BB7E] flex flex-col items-center gap-6 max-w-[1200px] w-full text-center h-screen justify-center mx-auto px-6 md:px-8 mt-20">
         <h1 className="saman text-[#92BB7E] text-[80px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none">
           prarambh
         </h1>
@@ -29,24 +29,6 @@ function App() {
           <p className="text-[18px] sm:text-[20px] robo">Live Stadium Festival</p>
           <p className="text-[18px] sm:text-[20px] robo">VSS Ground, VSSUT</p>
         </div>
-
-        {/* Limited width for the paragraph */}
-        <div className="max-w-[800px] w-full">
-          <p className="text-[16px] sm:text-[20px] text-[#92BB7E] text-wrap p-5 robo">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the standard dummy text ever since the 1500s.
-          </p>
-        </div>
-
-        <div className="flex gap-4 sm:gap-8">
-          <button className="robo outline border p-2 rounded-md hover:border-red-400 hover:bg-orange-600 cursor-pointer">
-            Register
-          </button>
-          <button className="robo outline border p-2 rounded-md hover:border-red-400 hover:bg-orange-600 cursor-pointer">
-            Broucher
-          </button>
-        </div>
-
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 text-center p-5">
           <div>
             <p className="text-[40px] sm:text-[55px]">
@@ -67,6 +49,25 @@ function App() {
             <p className="text-[18px] sm:text-[20px]">Registrations</p>
           </div>
         </div>
+
+        {/* Limited width for the paragraph */}
+        <div className="max-w-[800px] w-full">
+          <p className="text-[16px] sm:text-[20px] text-[#92BB7E] text-wrap p-5 robo">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the standard dummy text ever since the 1500s.
+          </p>
+        </div>
+
+        <div className="flex gap-4 sm:gap-8">
+          <button className="robo outline border p-2 rounded-md hover:border-red-400 hover:bg-orange-600 cursor-pointer">
+            Register
+          </button>
+          <button className="robo outline border p-2 rounded-md hover:border-red-400 hover:bg-orange-600 cursor-pointer">
+            Broucher
+          </button>
+        </div>
+
+        
       </section>
 
       {/* ABOUT US */}
