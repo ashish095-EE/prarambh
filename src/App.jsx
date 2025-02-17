@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import bgImage from "./assets/background.jpg";
+import bgImage from "./assets/bg14.jpeg";
 
 import CountUp from 'react-countup';
 import GalleryPhoto from "./components/GalleryPhoto";
@@ -14,6 +14,17 @@ import VolleyBall from "./components/VolleyBall";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 function App() {
+  const onClickDownload = () => {
+    fetch("IUSM_2025 (1).pdf").then((response) => {
+      response.blob().then((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "Brouchre.pdf";
+        a.click();
+      });
+    });
+  };
   return (
     <main
     className="relative w-full min-h-screen bg-black bg-fixed bg-center bg-cover snap-y snap-mandatory"
@@ -27,9 +38,9 @@ function App() {
       
       
       {/* First Section - Full Screen */}
-      <section className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center h-screen justify-center mx-auto px-6 md:px-8 mt-50 lg:mt-80">
+      <section className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center h-screen justify-center mx-auto px-6 md:px-8 lg:mt-20">
       
-        <h1 className="saman neonText text-[#92BB7E] text-[88px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none">
+        <h1 className="saman neonText text-[#92BB7E] text-[88px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none mt-80">
           prarambh
         </h1>
         <h1 className="z-[-20] saman neonTextDate text-[#92BB7E] text-[68px] sm:text-[90px] md:text-[120px] lg:text-[190px] leading-none animate-pulse">
@@ -39,25 +50,31 @@ function App() {
         {/* Three items spaced correctly */}
         <div className="flex flex-col sm:flex-row max-w-[1100px] w-full justify-between text-white p-5 text-center sm:text-left">
           <p className="text-[30px] sm:text-[30px] robo">Feb 26-28</p>
-          <p className="text-[18px] sm:text-[20px] robo">Live Stadium Festival</p>
-          <p className="text-[18px] sm:text-[20px] robo">VSSUT Ground, VSSUT</p>
+          
+          <p className="text-[18px] sm:text-[30px] robo">VSSUT Ground, VSSUT</p>
         </div>
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 text-center p-5 robo">
           <div>
             <p className="text-[20px] sm:text-[55px]">
-              <CountUp end={600} duration={2} /> +
+              <CountUp end={900} duration={5} /> +
             </p>
             <p className="text-[18px] sm:text-[20px]">Registrations</p>
           </div>
           <div>
-            <p className="text-[20px] sm:text-[55px]">6000+</p>
-            <p className="text-[18px] sm:text-[20px]">Registrations</p>
+            <p className="text-[20px] sm:text-[55px]">
+              <CountUp end={15} duration={10} /> +
+            </p>
+            <p className="text-[18px] sm:text-[20px]">Events</p>
+          </div>
+
+          <div>
+            <p className="text-[20px] sm:text-[55px]">
+              <CountUp end={15} duration={10} /> +
+            </p>
+            <p className="text-[18px] sm:text-[20px]">Colleges</p>
           </div>
           <div>
-            <p className="text-[20px] sm:text-[55px]">6000+</p>
-            <p className="text-[18px] sm:text-[20px]">Registrations</p>
-          </div>
-          <div>
+          
             <p className="text-[20px] sm:text-[55px]">6000+</p>
             <p className="text-[18px] sm:text-[20px]">Registrations</p>
           </div>
@@ -71,11 +88,14 @@ function App() {
         </div>
 
         <div className="flex gap-4 sm:gap-8">
-          <button className="bg-[#92BB7E] text-black robo outline border p-2 rounded-md hover:border-[#92BB7E] hover:text-[#92BB7E] hover:bg-black cursor-pointer">
-            Register
-          </button>
-          <button className="text-[#92BB7E] robo outline border p-2 rounded-md hover:bg-[#92BB7E] hover:text-black cursor-pointer">
-            Broucher
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSerAqd7Muqlit5KUMnwgdiyWtDRL1ys_OG0KxOB10x692pxvw/viewform">
+
+            <button className="bg-[#92BB7E] text-black robo outline border p-2 rounded-md hover:border-[#92BB7E] hover:text-[#92BB7E] hover:bg-black cursor-pointer">
+              Register
+            </button>
+          </a>
+          <button onClick={onClickDownload} className="text-[#92BB7E] robo outline border p-2 rounded-md hover:bg-[#92BB7E] hover:text-black cursor-pointer">
+            Brochure
           </button>
         </div>
 
@@ -83,20 +103,18 @@ function App() {
       </section>
 
       {/* ABOUT US */}
-      <section id="about" className="w-full min-h-screen  flex flex-col items-center justify-center text-[#92BB7E]p-6 sm:p-10">
-        <div className="mt-50">
-
-          <h1 className="underline-animation saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center">ABOUT US</h1>
-        </div>
+      <section id="about" className="w-full min-h-screen  flex flex-col items-center justify-center text-[#92BB7E]p-6 sm:p-10 mt-50">
+        
 
         <div className="flex flex-col md:flex-row items-center justify-center max-w-[1200px] w-full gap-8 mt-6">
           <img src="vssutPlogo.png" alt="About Us" className="w-[300px] md:w-[300px] lg:w-[400px] rounded-lg shadow-lg hover:scale-105" />
-          <p className="text-[16px] sm:text-[20px] robo max-w-[600px] text-center md:text-left text-white">
-          Get ready for the first-ever VSS Cup, VSSUT’s grand interuniversity sports showdown! This is where the best athletes from top universities clash for glory, pride, and ultimate bragging rights. What’s in Store? High-intensity matches of Cricket, Football, Kabaddi Volleyball & more filled with an Electrifying atmosphere, fierce rivalries, and unforgettable moments
-This isn’t just a tournament—it’s a legacy in the making. Whether you are playing, cheering, or just soaking in the action, be there to witness history!
-Gear up. Show up. Game on!
-From 26th-28th Feb 2025
-          </p>
+          <div>
+
+            <h1 className="underline-animation saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center">ABOUT US</h1>
+            <p className="text-[16px] sm:text-[20px] robo max-w-[600px] text-center md:text-left text-white">
+            <span className="text-orange-400 font-bold text-2xl">Prarambh</span> is the biggest sports fest in Western Odisha, organized by VSSUT, Burla. It brings together athletes from across the region to compete, showcase talent, and celebrate sportsmanship. With high-energy events and fierce competition, Prarambh is where champions rise.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -130,36 +148,36 @@ From 26th-28th Feb 2025
         <h1 className="saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center underline-animation">COORDINATORS</h1>
 
         {/* Coordinator Cards Container */}
-        <div className="flex flex-wrap lg:flex-nowrap justify-center items-center w-full max-w-[1200px] gap-15 mt-20">
+        <div className="flex flex-wrap lg:flex-nowrap justify-center items-center w-full gap-15 mt-20">
           
           {/* Coordinator 1 */}
-          <div className="flex flex-col items-center justify-center gap-5 max-w-[480px]">
+          <div className="flex flex-col items-center justify-center gap-5 max-w-[600px]">
             <img src="cood2.jpeg" alt="Coordinator 1" className="w-full max-w-[300px] h-[200px] shadow-lg object-cover rounded-lg animate-glow " />
             <div className="flex flex-col justify-center items-center">
-              <p className="text-[16px] sm:text-[20px] robo">Coordinator 1 Name</p>
-              <p className="text-[16px] sm:text-[20px] robo">Post</p>
+              <p className="text-[16px] sm:text-[20px] robo">Eli Innocent Kandulna</p>
+              <p className="text-[16px] sm:text-[20px] robo">Coordinator</p>
             </div>
-            <p className="text-[16px] sm:text-[20px] robo">Phone Number</p>
+            <p className="text-[16px] sm:text-[20px] robo">📞 9556248310</p>
           </div>
 
           {/* Coordinator 2 */}
           <div className="flex flex-col items-center justify-center gap-5 max-w-[480px]">
-            <img src="cood3.jpeg" alt="Coordinator 2" className="w-full max-w-[300px] h-[300px] shadow-lg object-cover rounded-lg animate-glow " />
+            <img src="cood3.jpeg" alt="Coordinator 2" className=" w-[300px] h-[200px] shadow-lg object-cover rounded-lg animate-glow " />
             <div className="flex flex-col justify-center items-center">
-              <p className="text-[16px] sm:text-[20px] robo">Coordinator 2 Name</p>
-              <p className="text-[16px] sm:text-[20px] robo">Post</p>
+              <p className="text-[16px] sm:text-[20px] robo">Nimaka Renuka</p>
+              <p className="text-[16px] sm:text-[20px] robo">Assistant Coordinator</p>
             </div>
-            <p className="text-[16px] sm:text-[20px] robo">Phone Number</p>
+            <p className="text-[16px] sm:text-[20px] robo">📞 7077677458</p>
           </div>
           
           {/* Coordinator 3 */}
-          <div className="flex flex-col items-center justify-center gap-5 max-w-[380px]">
-            <img src="bg.jpg" alt="Coordinator 3" className="w-full max-w-[300px] h-[300px] shadow-lg object-cover rounded-lg animate-glow " />
+          <div className="flex flex-col items-center justify-center gap-5 max-w-[480px]">
+            <img src="cood1.jpeg" alt="Coordinator 3" className="w-full max-w-[300px] h-[200px] shadow-lg object-cover rounded-lg animate-glow " />
             <div className="flex flex-col justify-center items-center">
-              <p className="text-[16px] sm:text-[20px] robo">Coordinator 3 Name</p>
-              <p className="text-[16px] sm:text-[20px] robo">Post</p>
+              <p className="text-[16px] sm:text-[20px] robo">Amaresh Mahapatra</p>
+              <p className="text-[16px] sm:text-[20px] robo">Secretary</p>
             </div>
-            <p className="text-[16px] sm:text-[20px] robo">Phone Number</p>
+            <p className="text-[16px] sm:text-[20px] robo">📞 8144223014</p>
           </div>
         </div>
       </section>
@@ -191,9 +209,13 @@ From 26th-28th Feb 2025
             </h1>
             <p className="text-lg text-gray-300 robo">📞 Phone: 0771-254-1234</p>
             <p className="text-lg text-gray-300 robo">📧 Email: 0771@vstut.ac.in</p>
-            <p className="text-lg text-gray-300 robo">📍 Address: VSSUT, Sambalpur, India</p>
+            <p className="text-lg text-gray-300 robo">📍 VSS University of Technology, Burla, Sambalpur-768018</p>
             <div className="bottom-5 right-0 flex gap-3 p-3 text-white ">
-              <FaInstagram className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
+              <a href="https://www.instagram.com/prarambh.vsscup/?hl=en">
+                
+                
+                <FaInstagram className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
+              <a/>
               <FaWhatsapp className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
               <FaFacebookF className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
               
@@ -207,10 +229,10 @@ From 26th-28th Feb 2025
 
 
       {/* SPONSORS */}
-      <section id="sponsors" className="w-full min-h-screen flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
+      {/* <section id="sponsors" className="w-full min-h-screen flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
         <h2 className="saman text-[#92BB7E] text-[40px] sm:text-[50px] leading-none mb-6 text-center underline-animation">SPONSORS</h2>
         
-      </section>
+      </section> */}
       </div>
     
     </main>

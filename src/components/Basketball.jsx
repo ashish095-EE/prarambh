@@ -1,16 +1,17 @@
 import { Description, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { useState } from "react";
+import { IoMdClose } from "react-icons/io";
 
 function Basketball() {
   const [modalOpen, setModalOpen] = useState(false);
 
   const onClickDownload = () => {
-    fetch("Badminton Boys & Girls.pdf").then((response) => {
+    fetch("Basketball.pdf").then((response) => {
       response.blob().then((blob) => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
         a.href = url;
-        a.download = "Badminton Boys & Girls.pdf";
+        a.download = "Basketball.pdf";
         a.click();
       });
     });
@@ -24,7 +25,9 @@ function Basketball() {
       <Dialog open={modalOpen} onClose={() => setModalOpen(false)} className="relative z-50">
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
           <DialogPanel className="relative w-full max-w-lg max-h-[600px] space-y-4 border bg-black p-6 rounded-lg">
-            <button onClick={() => setModalOpen(false)} className="absolute top-2 right-3 cursor-pointer text-white">X</button>
+           <button onClick={() => setModalOpen(false)} className="absolute top-2 right-3 cursor-pointer text-white">
+                         <IoMdClose className="size-8" />
+                       </button>
             <DialogTitle className="saman font-bold text-red-700 text-center text-4xl underline">
               Basketball
             </DialogTitle>
@@ -58,7 +61,7 @@ function Basketball() {
             </div>
 
             <div className="flex items-center justify-center">
-              <button className="mt-2 px-4 py-2 bg-red-600 text-white rounded-md" onClick={onClickDownload}>
+              <button className="robo mt-2 px-4 py-2 bg-red-600 text-white rounded-md" onClick={onClickDownload}>
                 Download Brochure
               </button>
             </div>

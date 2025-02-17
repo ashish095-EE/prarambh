@@ -85,23 +85,23 @@ body{
       0 0 8px #519f85,
       0 0 15px #201b1b,
       0 0 30px rgb(53, 160, 124),
-      0 0 50px rgb(37, 229, 165),
-      0 0 60px #0fa,
-      0 0 70px rgb(11, 107, 75),
-      0 0 100px rgb(19, 98, 71);
+      0 0 50px #bbcf47,
+      0 0 60px rgb(149, 220, 7),
+      0 0 70px rgb(179, 232, 6),
+      0 0 100px rgb(183, 214, 6);
 }
 
 .neonTextDate {
-  color: #fff;
+  color: #0b0b0b;
   text-shadow:
       0 0 5px #fff,
       0 0 8px #fff,
       0 0 15px #fff,
       0 0 30px rgb(57, 38, 121),
-      0 0 50px rgb(76, 61, 173),
-      0 0 60px rgb(76, 61, 173),
-      0 0 70px rgb(76, 61, 173),
-      0 0 100px rgb(76, 61, 173);
+      0 0 50px #bbcf47,
+      0 0 60px rgb(149, 220, 7),
+      0 0 70px rgb(179, 232, 6),
+      0 0 100px rgb(183, 214, 6);
 }
 
 
