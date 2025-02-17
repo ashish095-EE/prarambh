@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import bgImage from "./assets/bg14.jpeg";
+import bgImage from "./assets/bg18.jpg";
 
 import CountUp from 'react-countup';
 import GalleryPhoto from "./components/GalleryPhoto";
@@ -12,6 +12,7 @@ import Kabaddi from "./components/Kabaddi";
 import Swimming from "./components/Swimming";
 import VolleyBall from "./components/VolleyBall";
 import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+
 
 function App() {
   const onClickDownload = () => {
@@ -32,15 +33,15 @@ function App() {
   >
     <Header />
     {/* Background Overlay */}
-    <div className="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
+    <div className="absolute inset-0 bg-black/50 "></div>
       <div className="relative z-20">
 
       
       
       {/* First Section - Full Screen */}
-      <section className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center h-screen justify-center mx-auto px-6 md:px-8 lg:mt-20">
+      <section id="home" className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center h-screen justify-center mx-auto px-6 md:px-8 lg:mt-20">
       
-        <h1 className="saman neonText text-[#92BB7E] text-[88px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none mt-80">
+        <h1 className="saman neonText text-[#92BB7E] text-[88px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none mt-120">
           prarambh
         </h1>
         <h1 className="z-[-20] saman neonTextDate text-[#92BB7E] text-[68px] sm:text-[90px] md:text-[120px] lg:text-[190px] leading-none animate-pulse">
@@ -49,20 +50,20 @@ function App() {
 
         {/* Three items spaced correctly */}
         <div className="flex flex-col sm:flex-row max-w-[1100px] w-full justify-between text-white p-5 text-center sm:text-left">
-          <p className="text-[30px] sm:text-[30px] robo">Feb 26-28</p>
+          <p className="text-[30px] sm:text-[30px] robo">FEB 26-28</p>
           
-          <p className="text-[18px] sm:text-[30px] robo">VSSUT Ground, VSSUT</p>
+          <p className="text-[18px] sm:text-[30px] robo">VSSUT GROUND, VSSUT</p>
         </div>
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 text-center p-5 robo">
           <div>
             <p className="text-[20px] sm:text-[55px]">
-              <CountUp end={900} duration={5} /> +
+              <CountUp end={200} duration={5} /> +
             </p>
             <p className="text-[18px] sm:text-[20px]">Registrations</p>
           </div>
           <div>
             <p className="text-[20px] sm:text-[55px]">
-              <CountUp end={15} duration={10} /> +
+              <CountUp end={8} duration={10} /> +
             </p>
             <p className="text-[18px] sm:text-[20px]">Events</p>
           </div>
@@ -73,17 +74,13 @@ function App() {
             </p>
             <p className="text-[18px] sm:text-[20px]">Colleges</p>
           </div>
-          <div>
           
-            <p className="text-[20px] sm:text-[55px]">6000+</p>
-            <p className="text-[18px] sm:text-[20px]">Registrations</p>
-          </div>
         </div>
 
         {/* Limited width for the paragraph */}
         <div className="max-w-[800px] w-full">
           <p className="text-[16px] sm:text-[20px] text-white text-wrap p-5 robo">
-          Get ready for the first-ever <span className="text-red-700 font-semibold">VSS Cup, VSSUT’s grand interuniversity sports showdown!</span> This is where the best athletes from top universities clash for glory, pride, and ultimate bragging rights.
+          Get ready for the first-ever <span className="text-orange-400 font-semibold">VSS Cup, VSSUT’s grand interuniversity sports showdown!</span> This is where the best athletes from top universities clash for glory, pride, and ultimate bragging rights.
           </p>
         </div>
 
@@ -131,6 +128,7 @@ function App() {
           <Basketball />
           <Chess />
           <Swimming />
+          
         </div>
       </section>
 
@@ -149,6 +147,15 @@ function App() {
 
         {/* Coordinator Cards Container */}
         <div className="flex flex-wrap lg:flex-nowrap justify-center items-center w-full gap-15 mt-20">
+
+        <div className="flex flex-col items-center justify-center gap-5 max-w-[480px]">
+            <img src="cood1.jpeg" alt="Coordinator 3" className="w-full max-w-[300px] h-[200px] shadow-lg object-cover rounded-lg animate-glow " />
+            <div className="flex flex-col justify-center items-center">
+              <p className="text-[16px] sm:text-[20px] robo">Amaresh Mahapatra</p>
+              <p className="text-[16px] sm:text-[20px] robo">Secretary</p>
+            </div>
+            <p className="text-[16px] sm:text-[20px] robo">📞 8144223014</p>
+          </div>
           
           {/* Coordinator 1 */}
           <div className="flex flex-col items-center justify-center gap-5 max-w-[600px]">
@@ -171,14 +178,7 @@ function App() {
           </div>
           
           {/* Coordinator 3 */}
-          <div className="flex flex-col items-center justify-center gap-5 max-w-[480px]">
-            <img src="cood1.jpeg" alt="Coordinator 3" className="w-full max-w-[300px] h-[200px] shadow-lg object-cover rounded-lg animate-glow " />
-            <div className="flex flex-col justify-center items-center">
-              <p className="text-[16px] sm:text-[20px] robo">Amaresh Mahapatra</p>
-              <p className="text-[16px] sm:text-[20px] robo">Secretary</p>
-            </div>
-            <p className="text-[16px] sm:text-[20px] robo">📞 8144223014</p>
-          </div>
+          
         </div>
       </section>
 
@@ -207,16 +207,19 @@ function App() {
             <h1 className="text-xl sm:text-[30px] font-bold  mb-4 saman text-[#92BB7E] underline-animation">
               VEER SURENDRA SAI UNIVERSITY OF TECHNOLOGY
             </h1>
-            <p className="text-lg text-gray-300 robo">📞 Phone: 0771-254-1234</p>
-            <p className="text-lg text-gray-300 robo">📧 Email: 0771@vstut.ac.in</p>
+            <p className="text-lg text-gray-300 robo">📞 Phone: 8144223014</p>
+            <p className="text-lg text-gray-300 robo">📧 Email: amareshmohapatra78@gmail.com</p>
             <p className="text-lg text-gray-300 robo">📍 VSS University of Technology, Burla, Sambalpur-768018</p>
             <div className="bottom-5 right-0 flex gap-3 p-3 text-white ">
               <a href="https://www.instagram.com/prarambh.vsscup/?hl=en">
                 
                 
                 <FaInstagram className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
-              <a/>
-              <FaWhatsapp className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
+              </a>
+
+              <a href="https://chat.whatsapp.com/EHKmi1J0RPcIX6DhrenoOI">
+                <FaWhatsapp className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
+              </a>
               <FaFacebookF className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
               
               

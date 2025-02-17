@@ -31,7 +31,7 @@ function Basketball() {
             <DialogTitle className="saman font-bold text-red-700 text-center text-4xl underline">
               Basketball
             </DialogTitle>
-            <Description className="text-slate-700 text-center text-2xl">
+            <Description className="robo text-slate-700 text-center text-2xl">
               Rules Of Basketball
             </Description>
 

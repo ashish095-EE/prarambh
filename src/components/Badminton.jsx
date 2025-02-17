@@ -31,7 +31,7 @@ function Badminton() {
             <DialogTitle className="saman font-bold text-red-700 text-center text-4xl underline">
               Badminton
             </DialogTitle>
-            <Description className="text-gray-300 text-center text-2xl robo">
+            <Description className="text-slate-700 text-center text-2xl robo">
               Rules Of Badminton
             </Description>
 

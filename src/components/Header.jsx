@@ -5,10 +5,13 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="z-30 flex justify-between items-center top-0 left-0 p-2 w-full bg-black text-[#bbcf47] fixed">
+    <header className="z-30 flex justify-between items-center top-0 left-0 p-2 w-full bg-[#0c0c0d] text-[#bbcf47] fixed">
       {/* Logo */}
       <div>
-        <img src="vssutPlogo.png" alt="logo" className="size-20 hover:scale-120" />
+        <a href="#home">
+
+          <img src="vssutPlogo.png" alt="logo" className="size-20 hover:scale-120" />
+        </a>
       </div>
 
       {/* Desktop Menu */}
