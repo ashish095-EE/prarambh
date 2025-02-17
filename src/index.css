@@ -56,7 +56,7 @@ body{
 @keyframes border-blink {
   0% { border-color: #22c55e; } /* Green */
   50% { border-color: #facc15; } /* Yellow */
-  100% { border-color: #22c55e; } /* Back to Green */
+  100% { border-color: #076529; } /* Back to Green */
 }
 .animate-border-blink {
   animation: border-blink 2s infinite alternate;
@@ -77,3 +77,30 @@ body{
 .animate-glow {
   animation: glow 2s infinite alternate;
 }
+
+.neonText {
+  color: #fff;
+  text-shadow:
+      0 0 5px #fff,
+      0 0 8px #fff,
+      0 0 15px #fff,
+      0 0 30px #0fa,
+      0 0 50px #0fa,
+      0 0 60px #0fa,
+      0 0 70px #0fa,
+      0 0 100px #0fa;
+}
+
+.neonTextDate {
+  color: #fff;
+  text-shadow:
+      0 0 5px #fff,
+      0 0 8px #fff,
+      0 0 15px #fff,
+      0 0 30px rgb(57, 38, 121),
+      0 0 50px rgb(76, 61, 173),
+      0 0 60px rgb(76, 61, 173),
+      0 0 70px rgb(76, 61, 173),
+      0 0 100px rgb(76, 61, 173);
+}
+

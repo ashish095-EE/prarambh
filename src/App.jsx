@@ -27,8 +27,12 @@ function App() {
       
       {/* First Section - Full Screen */}
       <section className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center h-screen justify-center mx-auto px-6 md:px-8 mt-50">
-        <h1 className="saman text-[#92BB7E] text-[88px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none">
+      
+        <h1 className="saman neonText text-[#92BB7E] text-[88px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none">
           prarambh
+        </h1>
+        <h1 className="saman neonTextDate text-[#92BB7E] text-[68px] sm:text-[90px] md:text-[120px] lg:text-[190px] leading-none animate-pulse">
+          2025
         </h1>
 
         {/* Three items spaced correctly */}
