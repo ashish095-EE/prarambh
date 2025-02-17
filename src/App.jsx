@@ -11,7 +11,7 @@ import Chess from "./components/Chess";
 import Kabaddi from "./components/Kabaddi";
 import Swimming from "./components/Swimming";
 import VolleyBall from "./components/VolleyBall";
-import { FaFacebookF, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 function App() {
   return (
@@ -19,19 +19,20 @@ function App() {
     className="relative w-full min-h-screen bg-black bg-fixed bg-center bg-cover snap-y snap-mandatory"
     style={{ backgroundImage: `url(${bgImage})` }}
   >
+    <Header />
     {/* Background Overlay */}
     <div className="absolute inset-0 bg-black/50 backdrop-blur-xs"></div>
-      <div className="relative z-10">
+      <div className="relative z-20">
 
-      <Header />
+      
       
       {/* First Section - Full Screen */}
-      <section className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center h-screen justify-center mx-auto px-6 md:px-8 mt-50">
+      <section className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center h-screen justify-center mx-auto px-6 md:px-8 mt-50 lg:mt-80">
       
         <h1 className="saman neonText text-[#92BB7E] text-[88px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none">
           prarambh
         </h1>
-        <h1 className="saman neonTextDate text-[#92BB7E] text-[68px] sm:text-[90px] md:text-[120px] lg:text-[190px] leading-none animate-pulse">
+        <h1 className="z-[-20] saman neonTextDate text-[#92BB7E] text-[68px] sm:text-[90px] md:text-[120px] lg:text-[190px] leading-none animate-pulse">
           2025
         </h1>
 
@@ -39,7 +40,7 @@ function App() {
         <div className="flex flex-col sm:flex-row max-w-[1100px] w-full justify-between text-white p-5 text-center sm:text-left">
           <p className="text-[30px] sm:text-[30px] robo">Feb 26-28</p>
           <p className="text-[18px] sm:text-[20px] robo">Live Stadium Festival</p>
-          <p className="text-[18px] sm:text-[20px] robo">VSS Ground, VSSUT</p>
+          <p className="text-[18px] sm:text-[20px] robo">VSSUT Ground, VSSUT</p>
         </div>
         <div className="flex flex-wrap justify-center gap-6 sm:gap-12 text-center p-5 robo">
           <div>
@@ -65,8 +66,7 @@ function App() {
         {/* Limited width for the paragraph */}
         <div className="max-w-[800px] w-full">
           <p className="text-[16px] sm:text-[20px] text-white text-wrap p-5 robo">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the standard dummy text ever since the 1500s.
+          Get ready for the first-ever <span className="text-red-700 font-semibold">VSS Cup, VSSUT’s grand interuniversity sports showdown!</span> This is where the best athletes from top universities clash for glory, pride, and ultimate bragging rights.
           </p>
         </div>
 
@@ -83,39 +83,42 @@ function App() {
       </section>
 
       {/* ABOUT US */}
-      <section className="w-full min-h-screen  flex flex-col items-center justify-center text-[#92BB7E]p-6 sm:p-10">
-        <div className="">
+      <section id="about" className="w-full min-h-screen  flex flex-col items-center justify-center text-[#92BB7E]p-6 sm:p-10">
+        <div className="mt-50">
 
-          <h1 className="saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center">ABOUT US</h1>
+          <h1 className="underline-animation saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center">ABOUT US</h1>
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-center max-w-[1200px] w-full gap-8 mt-6">
-          <img src={bgImage} alt="About Us" className="w-[400px] md:w-[400px] lg:w-[500px] rounded-lg shadow-lg" />
+          <img src="vssutPlogo.png" alt="About Us" className="w-[300px] md:w-[300px] lg:w-[400px] rounded-lg shadow-lg hover:scale-105" />
           <p className="text-[16px] sm:text-[20px] robo max-w-[600px] text-center md:text-left text-white">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Get ready for the first-ever VSS Cup, VSSUT’s grand interuniversity sports showdown! This is where the best athletes from top universities clash for glory, pride, and ultimate bragging rights. What’s in Store? High-intensity matches of Cricket, Football, Kabaddi Volleyball & more filled with an Electrifying atmosphere, fierce rivalries, and unforgettable moments
+This isn’t just a tournament—it’s a legacy in the making. Whether you are playing, cheering, or just soaking in the action, be there to witness history!
+Gear up. Show up. Game on!
+From 26th-28th Feb 2025
           </p>
         </div>
       </section>
 
       {/* TOURNAMENTS */}
-      <section className="w-full min-h-screen  flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
-        <h2 className="saman text-[#92BB7E] text-[40px] sm:text-[50px] leading-none mb-6 text-center">TOURNAMENTS</h2>
+      <section id="tournament" className="w-full min-h-screen  flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
+        <h1 className="saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center underline-animation">TOURNAMENTS</h1>
 
         <div className="flex flex-wrap gap-6 sm:gap-16 justify-center items-center w-full max-w-[1000px]">
           <Football />
-          <Basketball />
-          <Cricket />
-          <Badminton />
-          <Chess />
           <Kabaddi />
-          <Swimming />
+          <Cricket />
           <VolleyBall />
+          <Badminton />
+          <Basketball />
+          <Chess />
+          <Swimming />
         </div>
       </section>
 
       {/* GALLERY */}
-      <section className="w-full min-h-screen  flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
-        <h2 className="saman text-[#92BB7E] text-[40px] sm:text-[50px] leading-none mb-6 text-center">GALLERY</h2>
+      <section id="gallery" className="w-full min-h-screen  flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
+        <h1 className="saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center underline-animation">GALLERY</h1>
 
         <div className="w-full max-w-[800px] h-[400px] sm:h-[500px] overflow-y-scroll custom-scrollbar border rounded-lg bg-black">
           <GalleryPhoto />
@@ -123,15 +126,15 @@ function App() {
       </section>
 
       {/* COORDINATORS */}
-      <section className="w-full min-h-screen  flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
-        <h2 className="saman text-[#92BB7E] text-[40px] sm:text-[50px] leading-none mb-6 text-center">COORDINATORS</h2>
+      <section id="coordiantors" className="w-full min-h-screen flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
+        <h1 className="saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center underline-animation">COORDINATORS</h1>
 
         {/* Coordinator Cards Container */}
         <div className="flex flex-wrap lg:flex-nowrap justify-center items-center w-full max-w-[1200px] gap-15 mt-20">
           
           {/* Coordinator 1 */}
           <div className="flex flex-col items-center justify-center gap-5 max-w-[480px]">
-            <img src="bg.jpg" alt="Coordinator 1" className="w-full max-w-[480px] h-[320px] shadow-lg object-cover rounded-lg animate-glow " />
+            <img src="cood2.jpeg" alt="Coordinator 1" className="w-full max-w-[300px] h-[200px] shadow-lg object-cover rounded-lg animate-glow " />
             <div className="flex flex-col justify-center items-center">
               <p className="text-[16px] sm:text-[20px] robo">Coordinator 1 Name</p>
               <p className="text-[16px] sm:text-[20px] robo">Post</p>
@@ -141,23 +144,33 @@ function App() {
 
           {/* Coordinator 2 */}
           <div className="flex flex-col items-center justify-center gap-5 max-w-[480px]">
-            <img src="bg.jpg" alt="Coordinator 2" className="w-full max-w-[480px] h-[320px] shadow-lg object-cover rounded-lg animate-glow " />
+            <img src="cood3.jpeg" alt="Coordinator 2" className="w-full max-w-[300px] h-[300px] shadow-lg object-cover rounded-lg animate-glow " />
             <div className="flex flex-col justify-center items-center">
               <p className="text-[16px] sm:text-[20px] robo">Coordinator 2 Name</p>
               <p className="text-[16px] sm:text-[20px] robo">Post</p>
             </div>
             <p className="text-[16px] sm:text-[20px] robo">Phone Number</p>
           </div>
-
+          
+          {/* Coordinator 3 */}
+          <div className="flex flex-col items-center justify-center gap-5 max-w-[380px]">
+            <img src="bg.jpg" alt="Coordinator 3" className="w-full max-w-[300px] h-[300px] shadow-lg object-cover rounded-lg animate-glow " />
+            <div className="flex flex-col justify-center items-center">
+              <p className="text-[16px] sm:text-[20px] robo">Coordinator 3 Name</p>
+              <p className="text-[16px] sm:text-[20px] robo">Post</p>
+            </div>
+            <p className="text-[16px] sm:text-[20px] robo">Phone Number</p>
+          </div>
         </div>
       </section>
 
 
+
       {/* CONTACT US */}
-      <section className="w-full min-h-screen flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
-        <h2 className="saman text-[#92BB7E] text-[40px] sm:text-[50px] leading-none mb-6 text-center">
+      <section id="contact" className="w-full min-h-screen flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
+        <h1 className="saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center underline-animation">
           CONTACT US
-        </h2>
+        </h1>
 
         {/* Container for Contact Info + Map */}
         <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-5xl gap-10">
@@ -173,14 +186,14 @@ function App() {
           
           
           <div className="w-full md:w-1/2 p-6 rounded-lg border border-transparent hover:border-[#92BB7E] hover:bg-[#92BB7E]/10 transition-all duration-300 shadow-lg">
-            <h1 className="text-xl sm:text-[30px] font-bold  mb-4 saman text-[#92BB7E]">
+            <h1 className="text-xl sm:text-[30px] font-bold  mb-4 saman text-[#92BB7E] underline-animation">
               VEER SURENDRA SAI UNIVERSITY OF TECHNOLOGY
             </h1>
             <p className="text-lg text-gray-300 robo">📞 Phone: 0771-254-1234</p>
             <p className="text-lg text-gray-300 robo">📧 Email: 0771@vstut.ac.in</p>
             <p className="text-lg text-gray-300 robo">📍 Address: VSSUT, Sambalpur, India</p>
             <div className="bottom-5 right-0 flex gap-3 p-3 text-white ">
-              <FaLinkedin className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
+              <FaInstagram className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
               <FaWhatsapp className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
               <FaFacebookF className="hover:text-[#92BB7E] cursor-pointer hover:scale-160 size-6" />
               
@@ -194,8 +207,8 @@ function App() {
 
 
       {/* SPONSORS */}
-      <section className="w-full min-h-screen flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
-        <h2 className="saman text-[#92BB7E] text-[40px] sm:text-[50px] leading-none mb-6 text-center">SPONSORS</h2>
+      <section id="sponsors" className="w-full min-h-screen flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
+        <h2 className="saman text-[#92BB7E] text-[40px] sm:text-[50px] leading-none mb-6 text-center underline-animation">SPONSORS</h2>
         
       </section>
       </div>

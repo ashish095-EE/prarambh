@@ -4,35 +4,65 @@ import { useState } from "react";
 function Badminton() {
   const [modalOpen, setModalOpen] = useState(false);
 
+  const onClickDownload = () => {
+    fetch("badminton.pdf").then((response) => {
+      response.blob().then((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "badminton.pdf";
+        a.click();
+      });
+    });
+  };
+
   return (
     <div onClick={() => setModalOpen(true)} className="hover:shadow-xl hover:scale-105 h-60 w-60 border-4 animate-border-blink flex flex-col justify-center items-center rounded-2xl bg-[#B6EB9D] cursor-pointer">
-      
-    <img src="badminton.png" alt="Badminton" className="h-40" />
-    <h1 className="text-[30px] text-black saman mt-3">Badminton</h1>
+      <img src="badminton.png" alt="Badminton" className="h-40" />
+      <h1 className="saman text-[30px] text-black mt-3">Badminton</h1>
 
-    <Dialog open={modalOpen} onClose={() => setModalOpen(false)} className="relative z-50">
-      <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
-        <DialogPanel className="relative w-full max-w-lg max-h-[500px] space-y-4 border bg-black p-6 rounded-lg">
-          <button onClick={() => setModalOpen(false)} className="absolute top-2 right-3 cursor-pointer text-white">X</button>
-          <DialogTitle className="font-bold  text-white">Badminton</DialogTitle>
-          <Description className="text-gray-300">Rules Of Badminton</Description>
+      <Dialog open={modalOpen} onClose={() => setModalOpen(false)} className="relative z-50">
+        <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+          <DialogPanel className="relative w-full max-w-lg max-h-[600px] space-y-4 border bg-black p-6 rounded-lg">
+            <button onClick={() => setModalOpen(false)} className="absolute top-2 right-3 cursor-pointer text-white">X</button>
+            <DialogTitle className="saman font-bold text-red-700 text-center text-4xl underline">
+              Badminton
+            </DialogTitle>
+            <Description className="text-gray-300 text-center text-2xl robo">
+              Rules Of Badminton
+            </Description>
 
-          {/* Scrollable Content */}
-          <div className="overflow-y-auto max-h-[350px] p-2 border border-gray-700 rounded-md">
-            <p className="text-gray-400">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry...Lorem Ipsum is simply dummy text of the printing and typesetting industry...Lorem Ipsum is simply dummy text of the printing and typesetting industry...Lorem Ipsum is simply dummy text of the printing and typesetting industry...Lorem Ipsum is simply dummy text of the printing and typesetting industry...Lorem Ipsum is simply dummy text of the printing and typesetting industry...Lorem Ipsum is simply dummy text of the printing and typesetting industry...Lorem Ipsum is simply dummy text of the printing and typesetting industry...
-            </p>
-          </div>
+            {/* Scrollable Content with Bullet Points */}
+            <div className="overflow-y-auto max-h-[350px] p-2 border border-gray-700 rounded-md">
+              <ul className="list-disc list-inside text-gray-400 space-y-2">
+                <li>A match consists of the best of three games to 21 points.</li>
+                <li>Every time there is a serve, one point is scored.</li>
+                <li>If the score is 20-20, the individual or team must win by two points to win the game.</li>
+                <li>
+                  In terms of serving:
+                  <ul className="list-[circle] list-inside ml-4 space-y-1">
+                    <li>If the server’s score is even, they serve from the right service court.</li>
+                    <li>If the server’s score is odd, they serve from the left service court.</li>
+                  </ul>
+                </li>
+                <li>The rally is over when:</li>
+                <ul className="list-[circle] list-inside ml-4 space-y-1">
+                  <li>The shuttlecock contacts the floor.</li>
+                  <li>The shuttlecock does not return over the net.</li>
+                  <li>The shuttlecock lands outside the court lines.</li>
+                </ul>
+              </ul>
+            </div>
 
-          <div className="flex items-center justify-center">
-            <button className="mt-2 px-4 py-2 bg-red-600 text-white rounded-md" onClick={() => setModalOpen(false)}>
-              Download Brochure
-            </button>
-          </div>
-        </DialogPanel>
-      </div>
-    </Dialog>
-  </div>
+            <div className="flex items-center justify-center">
+              <button className="mt-2 px-4 py-2 bg-red-600 text-white rounded-md" onClick={onClickDownload}>
+                Download Brochure
+              </button>
+            </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
+    </div>
   );
 }
 
