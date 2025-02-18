@@ -49,12 +49,15 @@ function Basketball() {
                 </li>
                 <li>No pushing, shouldering, tripping, or striking opponents is allowed to prevent injuries.</li>
                 <li>Striking the ball with a fist is considered a foul.</li>
-                <li>If a team commits three consecutive fouls, the opponent may count it as a goal.</li>
+                Teams shall comprise players and coaches. The number of players representing any college shall not bemore than 12 in the case of bothmen and women. A team member is entitled to play when his name has been entered on the score sheet before the start of the game and as long as he has neither been disqualified nor committed five (5) fouls.
+                
                 <li>If the ball is shot and rests on the net, it is counted as a goal.</li>
+                If a teamis unable to field five players till 15 minutes after the scheduled starting time of the game or if the teamrefuses to play thematch then the match is awarded to the opponentteam.
+Each teamshall report atthematch venue 30minutes before the scheduled start of their match.
                 <li>
                   The umpire is the judge of the game:
                   <ul className="list-[circle] list-inside ml-4 space-y-1">
-                    <li>If a team makes three consecutive fouls, the umpire reports it to the referee.</li>
+                    
                   </ul>
                 </li>
               </ul>

@@ -47,8 +47,7 @@ function Kabaddi() {
               </p>
               <ul className="list-disc list-inside text-gray-400 space-y-2 robo">
                 <li><span className="font-bold">Number of Players:</span> Each team has seven players on the court, with three to five reserve players.</li>
-                <li><span className="font-bold">Time Out:</span> Each team gets one 30-second time-out per half.</li>
-                <li><span className="font-bold">Match Length:</span> A match is usually played for 40 minutes with a 5-minute break.</li>
+                
               </ul>
 
               <p className="text-gray-400 mt-4 robo">
@@ -66,6 +65,8 @@ function Kabaddi() {
               <ul className="list-disc list-inside text-gray-400 space-y-2 robo">
                 <li><span className="font-bold">Disrupting the Match:</span> Players cannot intentionally delay or disrupt the game.</li>
                 <li><span className="font-bold">Unsportsmanlike Conduct:</span> Making derogatory remarks about officials or engaging in violent tackles is considered a foul.</li>
+                <li>Eligibility Criteria: 85 KG weight restrictions.(boys)</li>
+                <li>Eligibility Criteria: 75 KG weight restrictions.(Girls)</li>
               </ul>
             </div>
 

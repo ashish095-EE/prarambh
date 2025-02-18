@@ -244,7 +244,7 @@ function App() {
       {/* Footer */}
       <footer className="w-full text-center text-white py-4 border-t border-[#92BB7E]/50 mt-10">
         <p className="text-[14px] sm:text-[16px] robo">
-          © 2025 Prarambh. All Rights Reserved. Created by <span className="text-[#92BB7E] font-semibold">Ashish Mohapatra</span>.
+          © 2025 Prarambh. All Rights Reserved. 
         </p>
       </footer>
 
