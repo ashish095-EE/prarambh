@@ -37,7 +37,7 @@ function Badminton() {
 
             {/* Scrollable Content with Bullet Points */}
             <div className="overflow-y-auto max-h-[350px] p-2 border border-gray-700 rounded-md">
-              <ul className="list-disc list-inside text-gray-400 space-y-2">
+              <ul className="list-disc list-inside text-gray-400 space-y-2 robo">
                 <li>A match consists of the best of three games to 21 points.</li>
                 <li>Every time there is a serve, one point is scored.</li>
                 <li>If the score is 20-20, the individual or team must win by two points to win the game.</li>

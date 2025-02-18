@@ -40,7 +40,7 @@ function Football() {
               <ul className="robo list-disc list-inside text-gray-400 space-y-2">
                 <li>It is one of the most crucial football rules for the game.</li>
                 <li>A football match has two teams playing against each other.</li>
-                <li>The number of players in each team should be a minimum of 7 and must not exceed 11.</li>
+                <li>The number of players in each team should be a minimum of 11 and must not exceed 15.</li>
                 <li>Four categories of players are there in a football match: Goalkeeper, defenders, midfielders, and forwards.</li>
                 <li>Each team must have one designated goalkeeper. If unavailable/suspended, any position player can become the goalkeeper.</li>
                 <li>Each team is led by a captain who represents the team at the coin toss before kick-off or penalty kicks.</li>

@@ -32,6 +32,9 @@ function App() {
     style={{ backgroundImage: `url(${bgImage})` }}
   >
     <Header />
+
+    <div className="h-[150px] w-full"></div>
+
     {/* Background Overlay */}
     <div className="absolute inset-0 bg-black/50 "></div>
       <div className="relative z-20">
@@ -39,11 +42,15 @@ function App() {
       
       
       {/* First Section - Full Screen */}
-      <section id="home" className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center h-screen justify-center mx-auto px-6 md:px-8 lg:mt-20">
+      <section id="home" className="text-[#92BB7E] w-full flex flex-col items-center gap-6 text-center min-h-screen justify-center mx-auto px-6 md:px-8 lg:mt-20">
+
       
-        <h1 className="saman neonText text-[#92BB7E] text-[88px] sm:text-[120px] md:text-[180px] lg:text-[230px] leading-none mt-120">
-          prarambh
+      <div className="flex flex-col items-center justify-center w-full px-4 sm:px-8">
+        <h1 className="saman neonText text-[#92BB7E] text-[70px] sm:text-[90px] md:text-[140px] lg:text-[200px] leading-none">
+          PRARAMBH
         </h1>
+      </div>
+
         <h1 className="z-[-20] saman neonTextDate text-[#92BB7E] text-[68px] sm:text-[90px] md:text-[120px] lg:text-[190px] leading-none animate-pulse">
           2025
         </h1>
@@ -79,7 +86,7 @@ function App() {
 
         {/* Limited width for the paragraph */}
         <div className="max-w-[800px] w-full">
-          <p className="text-[16px] sm:text-[20px] text-white text-wrap p-5 robo">
+          <p className="text-[10px] sm:text-[20px] text-white text-wrap p-5 robo">
           Get ready for the first-ever <span className="text-orange-400 font-semibold">VSS Cup, VSSUT’s grand interuniversity sports showdown!</span> This is where the best athletes from top universities clash for glory, pride, and ultimate bragging rights.
           </p>
         </div>
@@ -100,14 +107,18 @@ function App() {
       </section>
 
       {/* ABOUT US */}
-      <section id="about" className="w-full min-h-screen  flex flex-col items-center justify-center text-[#92BB7E]p-6 sm:p-10 mt-50">
+      <section
+  id="about"
+  className="w-full min-h-screen flex flex-col items-center justify-center text-[#92BB7E] p-6 sm:p-10 mt-20"
+>
+
         
 
-        <div className="flex flex-col md:flex-row items-center justify-center max-w-[1200px] w-full gap-8 mt-6">
+        <div className="flex flex-col md:flex-row items-center justify-center max-w-[1200px] w-full gap-8 px-12">
           <img src="vssutPlogo.png" alt="About Us" className="w-[300px] md:w-[300px] lg:w-[400px] rounded-lg shadow-lg hover:scale-105" />
           <div>
 
-            <h1 className="underline-animation saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center">ABOUT US</h1>
+            <h1 className="underline-animation saman text-[#92BB7E] text-[30px] sm:text-[40px] leading-none mb-6 text-center">ABOUT US</h1>
             <p className="text-[16px] sm:text-[20px] robo max-w-[600px] text-center md:text-left text-white">
             <span className="text-orange-400 font-bold text-2xl">Prarambh</span> is the biggest sports fest in Western Odisha, organized by VSSUT, Burla. It brings together athletes from across the region to compete, showcase talent, and celebrate sportsmanship. With high-energy events and fierce competition, Prarambh is where champions rise.
             </p>
@@ -117,7 +128,7 @@ function App() {
 
       {/* TOURNAMENTS */}
       <section id="tournament" className="w-full min-h-screen  flex flex-col items-center text-[#92BB7E] p-6 sm:p-10">
-        <h1 className="saman text-[#92BB7E] text-[60px] sm:text-[80px] leading-none mb-6 text-center underline-animation">TOURNAMENTS</h1>
+        <h1 className="saman text-[#92BB7E] text-[48px] sm:text-[65px] leading-none mb-6 text-center underline-animation">TOURNAMENTS</h1>
 
         <div className="flex flex-wrap gap-6 sm:gap-16 justify-center items-center w-full max-w-[1000px]">
           <Football />
@@ -229,6 +240,14 @@ function App() {
 
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="w-full text-center text-white py-4 border-t border-[#92BB7E]/50 mt-10">
+        <p className="text-[14px] sm:text-[16px] robo">
+          © 2025 Prarambh. All Rights Reserved. Created by <span className="text-[#92BB7E] font-semibold">Ashish Mohapatra</span>.
+        </p>
+      </footer>
+
 
 
       {/* SPONSORS */}

@@ -37,7 +37,7 @@ function Basketball() {
 
             {/* Scrollable Content with Bullet Points */}
             <div className="overflow-y-auto max-h-[350px] p-2 border border-slate-700 rounded-md">
-              <ul className="list-disc list-inside text-gray-400 space-y-2">
+              <ul className="list-disc list-inside text-gray-400 space-y-2 robo">
                 <li>The ball must be held between or in the hands of players without involving the shoulder.</li>
                 <li>The ball can be thrown in any direction with either hand.</li>
                 <li>The ball can also be batted with any hand in any direction.</li>
