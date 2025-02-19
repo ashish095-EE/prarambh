@@ -16,7 +16,7 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 function App() {
   const onClickDownload = () => {
-    fetch("IUSM_2025 (1).pdf").then((response) => {
+    fetch("broucher.pdf").then((response) => {
       response.blob().then((blob) => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
