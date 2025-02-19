@@ -163,7 +163,7 @@ function App() {
             <img src="cood1.jpeg" alt="Coordinator 3" className="w-full max-w-[300px] h-[200px] shadow-lg object-cover rounded-lg animate-glow " />
             <div className="flex flex-col justify-center items-center">
               <p className="text-[16px] sm:text-[20px] robo">Amaresh Mahapatra</p>
-              <p className="text-[16px] sm:text-[20px] robo">Secretary</p>
+              <p className="text-[16px] sm:text-[20px] robo">Sports Secretary</p>
             </div>
             <p className="text-[16px] sm:text-[20px] robo">📞 8144223014</p>
           </div>
@@ -173,7 +173,7 @@ function App() {
             <img src="cood2.jpeg" alt="Coordinator 1" className="w-full max-w-[300px] h-[200px] shadow-lg object-cover rounded-lg animate-glow " />
             <div className="flex flex-col justify-center items-center">
               <p className="text-[16px] sm:text-[20px] robo">Eli Innocent Kandulna</p>
-              <p className="text-[16px] sm:text-[20px] robo">Coordinator</p>
+              <p className="text-[16px] sm:text-[20px] robo">Sports Coordinator</p>
             </div>
             <p className="text-[16px] sm:text-[20px] robo">📞 9556248310</p>
           </div>

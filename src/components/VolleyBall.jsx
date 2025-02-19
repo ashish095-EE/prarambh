@@ -46,6 +46,7 @@ function VolleyBall() {
                 <li>It is legal to contact the ball with any part of a player’s body.</li>
                 <li>It is illegal to catch, hold, or throw the ball.</li>
                 <li>A player cannot block or attack a serve from on or inside the 10-foot line.</li>
+                <li>players rotate clockwise after each sideout, or when the receiving team wins the right to serve.</li>
                 <li>After the serve, front-line players may switch positions at the net.</li>
                 <li>Matches are made up of sets; the number depends on the level of play.</li>
               </ul>

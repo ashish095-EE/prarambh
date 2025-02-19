@@ -5,7 +5,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="z-30 flex justify-between items-center top-0 left-0 p-4 w-full bg-black  text-[#bbcf47] fixed shadow-md">
+    <header className="z-30 flex justify-between items-center top-0 left-0 p-4 w-full bg-black  text-[#bbcf47] fixed">
       {/* Logo */}
       <div>
         <a href="#home">
